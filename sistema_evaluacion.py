@@ -1,5 +1,16 @@
-def pedir_entero(mensaje):
-    """Pide un número entero y valida que no esté vacío y sea correcto."""
+# Se crean las funciones que se utilizaran para el sistema de evaluación
+# Las siguientes funciones validan texto y números sujetas a diferentes condiciones
+
+def pedir_texto(mensaje):
+    while True:  # Repetir hasta tener texto válido
+        valor = input(mensaje).strip()  # Se elimina espacios
+        if not valor:  # Si quedó vacío
+            print("Este campo no puede quedar vacío. Intenta de nuevo.")
+        else:
+            return valor  # Si tiene contenido, se devuelve
+
+
+def pedir_numero(mensaje):
     while True:  # Ciclo para repetir hasta que el usuario ingrese un valor válido
         valor = input(mensaje).strip()  # Se pide el dato y se eliminan espacios
         if not valor:  # Validación: campo vacío
@@ -10,17 +21,8 @@ def pedir_entero(mensaje):
             continue
         return int(valor)  # Se convierte a entero y se regresa
 
-def pedir_texto(mensaje):
-    """Pide texto validando que no esté vacío."""
-    while True:  # Repetir hasta tener texto válido
-        valor = input(mensaje).strip()  # Se elimina espacios
-        if not valor:  # Si quedó vacío
-            print("Este campo no puede quedar vacío. Intenta de nuevo.")
-        else:
-            return valor  # Si tiene contenido, se devuelve
 
 def pedir_calificacion(materia):
-    """Pide una calificación válida entre 0 y 10."""
     while True:  # Ciclo para validar calificación
         valor = input(f"Calificación de {materia}: ").strip()
         if not valor:  # Validación: vacío
@@ -37,13 +39,13 @@ def pedir_calificacion(materia):
 
 
 
-print("--- SISTEMA DE EVALUACIÓN DE ALUMNOS ---")  # Título del sistema
+print("--- SISTEMA DE EVALUACIÓN DE ALUMNOS ---")  # Inicio del sistema
 
 # Se pide cuántos alumnos se van a registrar
-num_alumnos = pedir_entero("¿Cuántos alumnos deseas registrar?: ")
+num_alumnos = pedir_numero("¿Cuántos alumnos deseas registrar?: ")
 
 # Se pide cuántas materias tiene cada alumno
-num_materias = pedir_entero("¿Cuántas materias tiene cada alumno?: ")
+num_materias = pedir_numero("¿Cuántas materias tiene cada alumno?: ")
 
 materias = []  # Lista vacía para guardar los nombres de las materias
 
@@ -64,7 +66,7 @@ for i in range(num_alumnos):  # Repetir por cada alumno
 
     for materia in materias:  # Se pide calificación para cada materia
         cal = pedir_calificacion(materia)  # Función que valida calificación
-        calificaciones[materia] = cal  # Guardamos materia:calificación
+        calificaciones[materia] = cal  # Guardamos materia: calificación
 
     # Se agrega la estructura con toda la info del alumno a la lista
     alumnos.append({
@@ -74,12 +76,23 @@ for i in range(num_alumnos):  # Repetir por cada alumno
     })
 
 
-# Evaluar aprobados y reprobados
+# Evaluar aprobados, reprobados y promedio general
 
-print("\n--- RESULTADOS ---")  # Título de resultados
-for alumno in alumnos:  # Recorremos cada alumno guardado
+print("\n--- RESULTADOS ---")
+for alumno in alumnos:
     print(f"\nAlumno: {alumno['nombre']} - Matrícula: {alumno['matricula']}")
 
-    for materia, cal in alumno["calificaciones"].items():  # Cada materia del alumno
-        estado = "APROBADO" if cal >= 6 else "REPROBADO"  # Evaluación
-        print(f"  {materia}: {cal} --> {estado}")  # Resultado
+    total = 0  # Suma de calificaciones
+    for materia, cal in alumno["calificaciones"].items():
+        estado = "APROBADO" if cal >= 6 else "REPROBADO"
+        print(f"  {materia}: {cal} --> {estado}")
+        total += cal
+
+    # Calcular promedio general
+    promedio = total / num_materias
+
+    # Evaluar estado general
+    estado_general = "APROBADO" if promedio >= 6 else "REPROBADO"
+
+    print(f"\nPromedio general: {promedio:.2f} --> {estado_general}")
+
