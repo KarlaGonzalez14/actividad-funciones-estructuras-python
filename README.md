@@ -1,79 +1,104 @@
 # 🐍 Python – Proyectos Básicos con Funciones y Estructuras de Datos
 
-Este repositorio contiene cuatro programas desarrollados como práctica de programación en Python.  
-El objetivo es aplicar **estructuras de datos, ciclos, condicionales, funciones y lógica algorítmica** para resolver problemas reales.
+Este repositorio reúne **proyectos prácticos desarrollados en Python** enfocados en el **análisis lógico, validación de datos y resolución de problemas**, habilidades clave para un rol de **Data Analyst**.  
+Los ejercicios demuestran el uso de **Python para el manejo de datos, automatización básica, estructuras de control, estructuras de datos y Programación Orientada a Objetos (POO)**, aplicados a escenarios similares a los que se presentan en contextos reales de negocio.
 
 ---
 
-## 📘 Contenido del repositorio
+## 🚀 ¿Qué demuestra este repositorio?
 
-### 1️⃣ Sistema de Evaluación  
-Programa que permite capturar calificaciones, validar datos, almacenarlos en una lista, calcular el promedio final y mostrar un mensaje según el resultado.  
-Incluye:
-- Validación de números
-- Estructuras de datos (listas)
-- Ciclos `while`
-
-📄 **Archivo:** `sistema_evaluacion.py`
+- Capacidad para **analizar, validar y transformar datos de entrada**
+- Uso de **Python** para crear scripts claros y estructurados
+- Aplicación de **lógica algorítmica** para la toma de decisiones
+- Manejo de **estructuras de datos** para organizar información
+- Control de flujo y manejo de errores
+- Bases sólidas para **análisis de datos y automatización**
 
 ---
 
-### 2️⃣ Calculadora de Edad  
-Calcula la edad exacta del usuario solicitando la fecha de nacimiento y comparándola con la fecha actual.  
-Emplea:
-- Módulo `datetime`
-- Condicionales
-- Entrada y salida de datos
+## 📘 Proyectos incluidos
 
-📄 **Archivo:** `calculadora_edad.py`
+### 1️⃣ Sistema de Evaluación
+Automatiza la captura, validación y almacenamiento de calificaciones, calculando promedios y resultados finales.
 
----
+**Habilidades aplicadas:**
+- Validación de datos
+- Uso de listas para almacenamiento
+- Cálculo de métricas (promedios)
+- Ciclos y condicionales
 
-### 3️⃣ Inicio de Sesión  
-Simula un sistema real de autenticación con usuario y contraseña válidos, permitiendo 3 intentos.  
-Incluye:
-- Validación de campos vacíos
-- Comparación de credenciales
-- Control de intentos mediante ciclos
-
-📄 **Archivo:** `inicio_sesion.py`
+📄 [sistema_evaluacion.py](sistema_evaluacion.py)
 
 ---
 
-### 4️⃣ Cajero Automático  
-Simula el funcionamiento básico de un cajero automático:
-- Valida el monto ingresado
-- Calcula los billetes a entregar con la **menor cantidad posible**
-- Mantiene inventario de billetes
-- Descuenta billetes entregados
-- Muestra inventario actualizado
+### 2️⃣ Calculadora de Edad
+Script que calcula la edad exacta del usuario a partir de su fecha de nacimiento.
 
-Conceptos utilizados:
-- Ciclos
-- Condicionales
+**Habilidades aplicadas:**
+- Manejo de fechas (`datetime`)
+- Transformación de datos
+- Condicionales y control de flujo
+
+📄 [calculadora_edad.py](calculadora_edad.py)
+
+
+---
+
+### 3️⃣ Sistema de Inicio de Sesión
+Simulación de un sistema de autenticación con validaciones y control de intentos.
+
+**Habilidades aplicadas:**
+- Validación de datos de entrada
+- Control de reglas de negocio
+- Manejo de errores
+- Lógica condicional
+
+📄 [inicio_sesion.py](inicio_sesion.py)
+
+---
+
+### 4️⃣ Cajero Automático
+Simulación de un cajero automático que gestiona montos e inventario de billetes de forma eficiente.
+
+**Habilidades aplicadas:**
+- Algoritmos de optimización (*greedy*)
+- Análisis de restricciones y condiciones
 - Manejo de inventarios
-- Algoritmo tipo *greedy*
+- Toma de decisiones basada en datos
 
-📄 **Archivo:** `cajero_automatico.py`
-
----
-
-## 🎯 Objetivo de los ejercicios
-Aplicar las bases de programación en Python para:
-
-- Manejo de datos del usuario  
-- Validaciones  
-- Ciclos y control de flujo  
-- Estructuras de datos simples  
-- Simulación de situaciones reales
+📄 [cajero_automatico.py](cajero_automatico.py)
 
 ---
 
-## 🛠 Tecnologías utilizadas
-- Python    
-- GitHub  
+### 5️⃣ Calculadora con Programación Orientada a Objetos (Proyecto Final) ⭐
+Proyecto final del curso **Fundamentos de Python**, enfocado en el diseño de un script modular y reutilizable.
+
+**Habilidades aplicadas:**
+- Programación Orientada a Objetos (POO)
+- Encapsulamiento y validación de datos
+- Uso de listas y diccionarios para el historial
+- Manejo de errores y excepciones
+- Interpretación y procesamiento de datos ingresados por el usuario
+
+📄 `calculadora_poo.py`
+
+---
+
+## 🧠 Tecnologías y herramientas
+- Python
+- Pandas (nivel básico)
+- Programación Orientada a Objetos
+- Estructuras de datos
+- Git y GitHub
+
+---
+
+## 🎯 Enfoque Data Analyst
+Este repositorio refleja mi formación en **Fundamentos de Python** y mi capacidad para **limpiar, validar, procesar y analizar datos**, así como para transformar requerimientos en soluciones lógicas.  
+Representa una base sólida para roles de **Data Analyst Junior**, **Business Analyst** o posiciones enfocadas en análisis y automatización de datos.
 
 ---
 
 ## 📬 Contacto
-¡Puedes encontrarme en LinkedIn y ver más proyectos próximamente!
+📌 **LinkedIn:**   
+📌 **Correo:** karlaestrada1434@gmail.com
