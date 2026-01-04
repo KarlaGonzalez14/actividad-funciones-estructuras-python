@@ -100,6 +100,6 @@ Representa una base sólida para roles de **Data Analyst Junior**, **Business An
 ---
 
 ## 📬 Contacto
-📌 **LinkedIn: [LinkedIn – Karla María Gonzalez](https://www.linkedin.com/in/karla-maria-gonzalez-estrada-a07b44285/)**
+📌 **LinkedIn: [LinkedIn – Karla María González](https://www.linkedin.com/in/karla-maria-gonzalez-estrada-a07b44285/)**
 
 📌 **Correo: karlaestrada1434@gmail.com**
