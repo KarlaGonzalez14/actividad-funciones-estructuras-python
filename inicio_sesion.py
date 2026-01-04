@@ -29,3 +29,4 @@ while intentos > 0:
     # Mensaje final si ya no hay intentos
     if intentos == 0:
         print("\n Inténtelo más tarde, ha superado los intentos permitidos.")
+
