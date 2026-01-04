@@ -80,7 +80,7 @@ Proyecto final del curso **Fundamentos de Python**, enfocado en el diseño de un
 - Manejo de errores y excepciones
 - Interpretación y procesamiento de datos ingresados por el usuario
 
-📄 `calculadora_poo.py`
+📄 [calculadora_poo.py](calculadora_poo.py)
 
 ---
 
