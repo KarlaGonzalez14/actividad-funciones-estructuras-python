@@ -6,24 +6,23 @@ import datetime
 def calculadora():
     # Ciclo que se repetirá hasta que el usuario ingrese datos válidos
     while True:
+        fecha_str = input("Introduce tu fecha de nacimiento (DD-MM-AAAA): ")
         try:
-            # Declaración de variables donde el usuario ingresa su fecha de nacimiento
-            dia_nacimiento = int(input("Introduce tu día de nacimiento: "))
-            mes_nacimiento = int(input("Introduce tu mes de nacimiento: "))
-            ano_nacimiento = int(input("Introduce tu año de nacimiento: "))
+            # Convertir la cadena el objeto date
+            fecha_nacimiento = datetime.datetime.strptime(fecha_str, "%d-%m-%Y").date()
 
             # Validaciones para cada parte de la fecha de nacimiento
 
             # Día debe estar entre 1 y 31
-            if dia_nacimiento > 31 or dia_nacimiento < 1:
+            if fecha_nacimiento.day > 31 or fecha_nacimiento.day < 1:
                 print("Dato del día inválido")
 
             # Mes debe estar entre 1 y 12
-            elif mes_nacimiento > 12 or mes_nacimiento < 1:
+            elif fecha_nacimiento.month > 12 or fecha_nacimiento.month < 1:
                 print("Dato del mes inválido")
 
             # Año mínimo permitido (evita fechas imposibles o demasiado antiguas)
-            elif ano_nacimiento < 1900:
+            elif fecha_nacimiento.year < 1900:
                 print("Dato del año inválido")
 
             else:
@@ -39,10 +38,10 @@ def calculadora():
     # Luego se ajusta la edad restando 1 si todavía no llega el cumpleaños este año.
     edad = (
             datetime.datetime.now().year
-            - ano_nacimiento
+            - fecha_nacimiento.year
             - (
                     (datetime.datetime.now().month, datetime.datetime.now().day)
-                    < (mes_nacimiento, dia_nacimiento)
+                    < (fecha_nacimiento.month, fecha_nacimiento.day)
             )
     )
 
